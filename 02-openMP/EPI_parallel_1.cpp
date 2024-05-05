@@ -32,7 +32,7 @@ int main()
     double start = omp_get_wtime();
 #pragma omp parallel
     {
-        size_t inside_circle = 0;
+        size_t inside_circle = 0;  #private variable
         int thread_id = omp_get_thread_num();
         for (size_t i = 0; i < N_SAMPLES / NUM_THREADS; i++)
         {
